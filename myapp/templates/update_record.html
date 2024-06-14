@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Customer</title>
+</head>
+    {% block content %}
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm">
+            <h2 class="text-2xl font-bold mb-6 text-center">Update customer</h2>
+            <form method="post" autocomplete="off" class="space-y-6">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div>
+                    <input type="submit"  class="w-full py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-lg">
+                </div>
+                {% for error in form.non_field_errors %}
+                    {{error}}
+                {% endfor %}
+            </form>
+    </div>
+    {% endblock %}
