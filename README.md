@@ -1,4 +1,3 @@
-```markdown
 # Django CRM Application
 
 ## Table of Contents
