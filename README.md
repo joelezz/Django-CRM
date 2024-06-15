@@ -1,1 +1,164 @@
-This is a Django version of the CRM -application. Added CSV export and upload functionalities, as well as some styling with Tailwind css.
+# Django CRM Application
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Prerequisites](#prerequisites)
+4. [Installation](#installation)
+5. [Configuration](#configuration)
+6. [Usage](#usage)
+7. [Project Structure](#project-structure)
+8. [API Endpoints](#api-endpoints)
+9. [Contributing](#contributing)
+10. [License](#license)
+
+## Introduction
+
+Welcome to the Django CRM Application! This project is designed to manage customer relationships, providing functionalities such as customer registration, authentication, viewing customer records, and CSV file operations. This project showcases my backend development skills using Django, demonstrating proficiency in creating robust and scalable web applications.
+
+## Features
+
+- User Registration and Authentication
+- Add, View, and Manage Customers
+- Import and Export Customer Data via CSV
+- User-friendly Interface with Authentication Protected Routes
+
+## Prerequisites
+
+Before you begin, ensure you have the following prerequisites installed:
+
+- Python 3.8+
+- Django 3.2+
+- Git
+
+## Installation
+
+Follow these steps to get the project up and running on your local machine:
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/joelezz/Django-CRM.git
+   cd Django-CRM
+Create a Virtual Environment:
+
+bash
+Kopioi koodi
+python -m venv env
+source env/bin/activate  # On Windows, use `env\Scripts\activate`
+Install Dependencies:
+
+bash
+Kopioi koodi
+pip install -r requirements.txt
+Apply Migrations:
+
+bash
+Kopioi koodi
+python manage.py migrate
+Create a Superuser:
+
+bash
+Kopioi koodi
+python manage.py createsuperuser
+Run the Development Server:
+
+bash
+Kopioi koodi
+python manage.py runserver
+Open your browser and navigate to http://127.0.0.1:8000 to see the application in action.
+
+Configuration
+Environment Variables
+Create a .env file in the root directory of the project to store environment variables:
+
+env
+Kopioi koodi
+SECRET_KEY=your_secret_key
+DEBUG=True
+DATABASE_URL=sqlite:///db.sqlite3
+Ensure you replace your_secret_key with a secret key for your Django application.
+
+Usage
+User Registration and Login
+Register:
+
+Navigate to http://127.0.0.1:8000/register to create a new user account.
+
+Login:
+
+Navigate to http://127.0.0.1:8000/my-login to log in with your credentials.
+
+Managing Customers
+View Customers:
+
+Navigate to http://127.0.0.1:8000/customers to view a list of all customers.
+
+Add Customer:
+
+Navigate to http://127.0.0.1:8000/add_customer to add a new customer.
+
+View Customer Record:
+
+Click on a customer ID in the list to view the customer's detailed record.
+
+Import and Export CSV
+Import Customers:
+
+Navigate to http://127.0.0.1:8000/upload_csv to upload a CSV file containing customer data.
+
+Export Customers:
+
+Navigate to http://127.0.0.1:8000/export_customers_csv to download a CSV file with all customer data.
+
+Project Structure
+plaintext
+Kopioi koodi
+Django-CRM/
+├── crm/
+│   ├── migrations/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   ├── views.py
+├── myapp/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+├── templates/
+│   ├── base.html
+│   ├── register.html
+│   ├── login.html
+│   ├── customers.html
+│   ├── add_customer.html
+│   ├── record.html
+├── static/
+│   ├── css/
+│   ├── js/
+├── manage.py
+├── .env
+├── .gitignore
+├── requirements.txt
+
+API Endpoints
+User Registration: POST /register
+User Login: POST /my-login
+View Customers: GET /customers
+Add Customer: POST /add_customer
+View Customer Record: GET /record/<int:id>
+Upload CSV: POST /upload_csv
+Export CSV: GET /export_customers_csv
+Contributing
+Contributions are welcome! Please fork the repository and create a pull request with your changes.
+
+Fork the Project
+Create your Feature Branch (git checkout -b feature/AmazingFeature)
+Commit your Changes (git commit -m 'Add some AmazingFeature')
+Push to the Branch (git push origin feature/AmazingFeature)
+Open a Pull Request
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
