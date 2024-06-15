@@ -47,27 +47,33 @@ Follow these steps to get the project up and running on your local machine:
 python -m venv env
 source env/bin/activate  # On Windows, use `env\Scripts\activate`
 
-Install Dependencies:
+3. **Install Dependencies:**
 
 ```bash
 pip install -r requirements.txt
-Apply Migrations:
+
+4. **Apply Migrations:**
 
 ```bash
 python manage.py migrate
-Create a Superuser:
+
+5. **Create a Superuser:**
 
 ```bash
 python manage.py createsuperuser
-Run the Development Server:
+
+6. **Run the Development Server:**
 
 ```bash
 python manage.py runserver
+
 Open your browser and navigate to http://127.0.0.1:8000 to see the application in action.
 
-Configuration
+**Configuration**
+
 Environment Variables
-Create a .env file in the root directory of the project to store environment variables:
+
+7. **Create a .env file in the root directory of the project to store environment variables:**
 
 ```env
 SECRET_KEY=your_secret_key
@@ -75,35 +81,37 @@ DEBUG=True
 DATABASE_URL=sqlite:///db.sqlite3
 Ensure you replace your_secret_key with a secret key for your Django application.
 
-Usage
+**Usage**
 User Registration and Login
-Register:
+
+8. **Register:**
 
 Navigate to http://127.0.0.1:8000/register to create a new user account.
 
-Login:
+9. **Login:**
 
 Navigate to http://127.0.0.1:8000/my-login to log in with your credentials.
 
 Managing Customers
-View Customers:
+10. **View Customers:**
 
 Navigate to http://127.0.0.1:8000/customers to view a list of all customers.
 
-Add Customer:
+11. **Add Customer:**
 
 Navigate to http://127.0.0.1:8000/add_customer to add a new customer.
 
-View Customer Record:
+12. **View Customer Record:**
 
 Click on a customer ID in the list to view the customer's detailed record.
 
 Import and Export CSV
-Import Customers:
+
+13. **Import Customers:**
 
 Navigate to http://127.0.0.1:8000/upload_csv to upload a CSV file containing customer data.
 
-Export Customers:
+14. **Export Customers:**
 
 Navigate to http://127.0.0.1:8000/export_customers_csv to download a CSV file with all customer data.
 
@@ -141,7 +149,7 @@ Django-CRM/
 ├── .gitignore
 ├── requirements.txt
 
-API Endpoints
+**API Endpoints**
 User Registration: POST /register
 User Login: POST /my-login
 View Customers: GET /customers
@@ -152,10 +160,11 @@ Export CSV: GET /export_customers_csv
 Contributing
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
-Fork the Project
+**Fork the Project**
 Create your Feature Branch (git checkout -b feature/AmazingFeature)
 Commit your Changes (git commit -m 'Add some AmazingFeature')
 Push to the Branch (git push origin feature/AmazingFeature)
 Open a Pull Request
+
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
