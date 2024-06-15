@@ -1,3 +1,4 @@
+```markdown
 # Django CRM Application
 
 ## Table of Contents
@@ -40,85 +41,94 @@ Follow these steps to get the project up and running on your local machine:
    ```bash
    git clone https://github.com/joelezz/Django-CRM.git
    cd Django-CRM
-   
+   ```
+
 2. **Create a Virtual Environment:**
 
-```bash
-python -m venv env
-source env/bin/activate  # On Windows, use `env\Scripts\activate`
+   ```bash
+   python -m venv env
+   source env/bin/activate  # On Windows, use `env\Scripts\activate`
+   ```
 
 3. **Install Dependencies:**
 
-```bash
-pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 4. **Apply Migrations:**
 
-```bash
-python manage.py migrate
+   ```bash
+   python manage.py migrate
+   ```
 
 5. **Create a Superuser:**
 
-```bash
-python manage.py createsuperuser
+   ```bash
+   python manage.py createsuperuser
+   ```
 
 6. **Run the Development Server:**
 
-```bash
-python manage.py runserver
+   ```bash
+   python manage.py runserver
+   ```
 
-Open your browser and navigate to http://127.0.0.1:8000 to see the application in action.
+   Open your browser and navigate to `http://127.0.0.1:8000` to see the application in action.
 
-**Configuration**
+## Configuration
 
-Environment Variables
+### Environment Variables
 
-7. **Create a .env file in the root directory of the project to store environment variables:**
+Create a `.env` file in the root directory of the project to store environment variables:
 
 ```env
 SECRET_KEY=your_secret_key
 DEBUG=True
 DATABASE_URL=sqlite:///db.sqlite3
-Ensure you replace your_secret_key with a secret key for your Django application.
+```
 
-**Usage**
-User Registration and Login
+Ensure you replace `your_secret_key` with a secret key for your Django application.
 
-8. **Register:**
+## Usage
 
-Navigate to http://127.0.0.1:8000/register to create a new user account.
+### User Registration and Login
 
-9. **Login:**
+1. **Register:**
 
-Navigate to http://127.0.0.1:8000/my-login to log in with your credentials.
+   Navigate to `http://127.0.0.1:8000/register` to create a new user account.
 
-Managing Customers
-10. **View Customers:**
+2. **Login:**
 
-Navigate to http://127.0.0.1:8000/customers to view a list of all customers.
+   Navigate to `http://127.0.0.1:8000/my-login` to log in with your credentials.
 
-11. **Add Customer:**
+### Managing Customers
 
-Navigate to http://127.0.0.1:8000/add_customer to add a new customer.
+1. **View Customers:**
 
-12. **View Customer Record:**
+   Navigate to `http://127.0.0.1:8000/customers` to view a list of all customers.
 
-Click on a customer ID in the list to view the customer's detailed record.
+2. **Add Customer:**
 
-Import and Export CSV
+   Navigate to `http://127.0.0.1:8000/add_customer` to add a new customer.
 
-13. **Import Customers:**
+3. **View Customer Record:**
 
-Navigate to http://127.0.0.1:8000/upload_csv to upload a CSV file containing customer data.
+   Click on a customer ID in the list to view the customer's detailed record.
 
-14. **Export Customers:**
+### Import and Export CSV
 
-Navigate to http://127.0.0.1:8000/export_customers_csv to download a CSV file with all customer data.
+1. **Import Customers:**
 
-```bash
-Project Structure
-plaintext
-Kopioi koodi
+   Navigate to `http://127.0.0.1:8000/upload_csv` to upload a CSV file containing customer data.
+
+2. **Export Customers:**
+
+   Navigate to `http://127.0.0.1:8000/export_customers_csv` to download a CSV file with all customer data.
+
+## Project Structure
+
+```plaintext
 Django-CRM/
 ├── crm/
 │   ├── migrations/
@@ -148,23 +158,29 @@ Django-CRM/
 ├── .env
 ├── .gitignore
 ├── requirements.txt
+```
 
-**API Endpoints**
-User Registration: POST /register
-User Login: POST /my-login
-View Customers: GET /customers
-Add Customer: POST /add_customer
-View Customer Record: GET /record/<int:id>
-Upload CSV: POST /upload_csv
-Export CSV: GET /export_customers_csv
-Contributing
+## API Endpoints
+
+- **User Registration:** `POST /register`
+- **User Login:** `POST /my-login`
+- **View Customers:** `GET /customers`
+- **Add Customer:** `POST /add_customer`
+- **View Customer Record:** `GET /record/<int:id>`
+- **Upload CSV:** `POST /upload_csv`
+- **Export CSV:** `GET /export_customers_csv`
+
+## Contributing
+
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
-**Fork the Project**
-Create your Feature Branch (git checkout -b feature/AmazingFeature)
-Commit your Changes (git commit -m 'Add some AmazingFeature')
-Push to the Branch (git push origin feature/AmazingFeature)
-Open a Pull Request
+1. **Fork the Project**
+2. **Create your Feature Branch (`git checkout -b feature/AmazingFeature`)**
+3. **Commit your Changes (`git commit -m 'Add some AmazingFeature'`)**
+4. **Push to the Branch (`git push origin feature/AmazingFeature`)**
+5. **Open a Pull Request**
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
