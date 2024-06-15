@@ -43,28 +43,24 @@ Follow these steps to get the project up and running on your local machine:
 Create a Virtual Environment:
 
 bash
-Kopioi koodi
 python -m venv env
 source env/bin/activate  # On Windows, use `env\Scripts\activate`
+
 Install Dependencies:
 
 bash
-Kopioi koodi
 pip install -r requirements.txt
 Apply Migrations:
 
 bash
-Kopioi koodi
 python manage.py migrate
 Create a Superuser:
 
 bash
-Kopioi koodi
 python manage.py createsuperuser
 Run the Development Server:
 
 bash
-Kopioi koodi
 python manage.py runserver
 Open your browser and navigate to http://127.0.0.1:8000 to see the application in action.
 
@@ -73,7 +69,6 @@ Environment Variables
 Create a .env file in the root directory of the project to store environment variables:
 
 env
-Kopioi koodi
 SECRET_KEY=your_secret_key
 DEBUG=True
 DATABASE_URL=sqlite:///db.sqlite3
