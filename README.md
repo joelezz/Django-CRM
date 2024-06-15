@@ -40,7 +40,8 @@ Follow these steps to get the project up and running on your local machine:
    ```bash
    git clone https://github.com/joelezz/Django-CRM.git
    cd Django-CRM
-Create a Virtual Environment:
+   
+2. **Create a Virtual Environment:**
 
 bash
 python -m venv env
